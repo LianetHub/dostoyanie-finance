@@ -1,24 +1,110 @@
 <header class="header">
     <div class="header__container">
-        <a href="/" class="header__logo logo">
-            <img src="@img/logo.svg" alt="Логотип Quintes Sense" class="logo__icon">
-            <span class="logo__text icon-cross">Совместно с&nbsp;Quintes Sense</span>
-        </a>
-        <nav class="header__menu">
-            <ul class="header__menu-list">
-                <li class="header__menu-item"><a href="#waiting" class="header__menu-link">Что вас ждет?</a></li>
-                <li class="header__menu-item"><a href="#place" class="header__menu-link">Локация</a></li>
-                <li class="header__menu-item"><a href="#program" class="header__menu-link">Программа ретрита</a></li>
-                <li class="header__menu-item"><a href="#price" class="header__menu-link">Стоимость</a></li>
-                <li class="header__menu-item"><a href="#contacts" class="header__menu-link">Контакты</a></li>
-            </ul>
-            <div class="header__socials">
-                <a href="" class="header__social icon-telegram"></a>
-                <a href="" class="header__social icon-whatsapp"></a>
+        <div class="header__top">
+            <a href="/" class="header__logo">
+                <img src="@img/logo.svg" alt="Логотип">
+                <span>Клиника ментального здоровья</span>
+            </a>
+            <div class="header__contacts icon-phone">
+                <a href="tel:+78126067796" class="header__contacts-phone"><span>+7 (812) 606-77-96</span></a>
+                <p class="header__contacts-worktime">Ежедневно: 09-00 — 21:00</p>
             </div>
-        </nav>
-        <button type="button" class="header__menu-toggler icon-menu">
-            <span></span><span></span><span></span>
-        </button>
+            <div class="header__address">
+                <address>СПб, ул. Большая Пушкарская, д. 6</address>
+                <div class="header__address-footer">
+                    <div class="header__address-station icon-metro">
+                        Петроградская
+                    </div>
+                    <a href="" class="header__address-link">Как доехать?</a>
+                </div>
+            </div>
+            <div class="header__socials">
+                <div class="header__socials-text">Написать нам:</div>
+                <div class="header__socials-links">
+                    <a href="" class="header__socials-link icon-whatsapp"></a>
+                    <a href="" class="header__socials-link icon-telegram"></a>
+                </div>
+            </div>
+            <div class="header__actions">
+                <div class="header__search search">
+                    <button type="button" aria-label="Открыть форму поиска" class="search__btn icon-search"></button>
+                    <form action="#" class="search__form">
+                        <input type="text" autocomplete="off" name="search" class="search__form-input form__input" placeholder="Введите запрос...">
+                        <button type="submit" class="search__submit btn btn-primary ">Искать</button>
+                    </form>
+                </div>
+                <button type="button" aria-label="Режим для слабовидящих" class="header__eye icon-eye"></button>
+            </div>
+            <button type="button" class="header__menu-btn icon-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div class="header__menu menu">
+            <nav aria-label="Меню в шапке" class="menu__body">
+                <ul class="menu__list">
+                    <li class="menu__item menu-parent">
+                        <a href="" class="menu__link@@if(typeof active !== 'undefined' && active===1){ active}">Услуги</a>
+                        <button type="button" class="menu__arrow icon-chevron"></button>
+                        <div class="submenu">
+                            <div class="submenu__container">
+                                <ul class="submenu__list">
+                                    <li class="submenu__category">
+                                        <a href="" class="submenu__category-caption">Психиатрия</a>
+                                        <ul class="submenu__category-list">
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Консультация психиатра</a></li>
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Лечение депрессии</a></li>
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Лечение тревожных расстройств</a></li>
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Помощь при панических атаках</a></li>
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Лечение шизофрении</a></li>
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Лечение биполярного расстройства</a></li>
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Лечение обсессивно-компульсивного расстройства (ОКР)</a></li>
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Терапия при посттравматическом стрессовом расстройстве (ПТСР)</a></li>
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Лечение зависимостей (алкогольная, наркотическая, игровая)</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu__category">
+                                        <a href="" class="submenu__category-caption">Неврология</a>
+                                        <ul class="submenu__category-list">
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Консультация невролога</a></li>
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Лечение мигрени и головных болей</a></li>
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Лечение нарушений сна (бессонница, апноэ)</a></li>
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Помощь при хронической усталости</a></li>
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Лечение нейропатий (например, полинейропатия)</a></li>
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Диагностика и лечение эпилепсии</a></li>
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Лечение последствий черепно-мозговых травм</a></li>
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Реабилитация после инсультов</a></li>
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Диагностика заболеваний центральной и периферической нервной системы</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu__category">
+                                        <a href="" class="submenu__category-caption">Психология</a>
+                                        <ul class="submenu__category-list">
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Индивидуальная психологическая консультация</a></li>
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Семейная и парная терапия</a></li>
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Детская и подростковая психология</a></li>
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Помощь при низкой самооценке и проблемах с уверенностью</a></li>
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Коррекция эмоционального состояния (стресс, раздражительность, апатия)</a></li>
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Психологическая помощь при кризисах и утрате</a></li>
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Помощь в адаптации после стрессовых ситуаций</a></li>
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Работа с фобиями и страхами</a></li>
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Лечение вегетососудистой дистонии (ВСД)</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu__item"><a href="/about.html" class="menu__link@@if(typeof active !== 'undefined' && active===2){ active}">О клинике</a></li>
+                    <li class="menu__item"><a href="" class="menu__link">Специалисты</a></li>
+                    <li class="menu__item"><a href="/price.html" class="menu__link@@if(typeof active !== 'undefined' && active===4){ active}">Стоимость</a></li>
+                    <li class="menu__item"><a href="/blog.html" class="menu__link@@if(typeof active !== 'undefined' && active===5){ active}">Статьи</a></li>
+                    <li class="menu__item"><a href="" class="menu__link">Отзывы</a></li>
+                    <li class="menu__item"><a href="/contacts.html" class="menu__link@@if(typeof active !== 'undefined' && active===7){ active}">Контакты</a></li>
+                </ul>
+            </nav>
+            <a href="#callback" data-fancybox class="menu__callback btn btn-primary btn-lg">Запись на прием</a>
+        </div>
     </div>
 </header>

@@ -66,11 +66,9 @@ export const spollers = () => {
                     }
                 });
 
-                if (matchMedia.removeEventListener) {
-                    matchMedia.removeEventListener("change", () => {
-                        initSpollers(spollersArray, matchMedia);
-                    });
-                }
+                matchMedia.addListener(function () {
+                    initSpollers(spollersArray, matchMedia);
+                });
                 initSpollers(spollersArray, matchMedia);
             });
         }
