@@ -86,7 +86,7 @@ export const fontsStyle = () => {
                         case "thin": fontWeight = 100; break;
                         case "extralight": fontWeight = 200; break;
                         case "light": fontWeight = 300; break;
-                        case "book": fontWeight = 350; break;
+                        case "book": fontWeight = 450; break;
                         case "medium": fontWeight = 500; break;
                         case "semibold":
                         case "demi": fontWeight = 600; break;

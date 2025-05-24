@@ -33,13 +33,13 @@ $containerPadding: 30;
 // ЦВЕТА
 
 $white: #fff;
-$text: #2b2b2b;
+$text: #111827;
+$accent: #4d8a4a;
 
-$accent: #0739a6;
 $green: #01ce22;
 $red: #fa0644;
 
-$shadow: 0 rem(4) rem(32) rem(3) rgba(7, 57, 166, 0.02);
+$shadow: rem(4) rem(4) rem(100) rgba(66, 114, 63, 0.15);
 
 // Z-Index
 
@@ -64,8 +64,3 @@ $ui-index-6: 6; // Для элементов, перекрывающих все
 // СТИЛИ СТРАНИЦ
 
 @import "pages/home";
-@import "pages/service";
-@import "pages/doctor";
-@import "pages/blog";
-@import "pages/price";
-@import "pages/about";

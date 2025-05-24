@@ -1,39 +1,45 @@
 .form {
-	&__field {
-		width: 100%;
-		& label {
-			line-height: 1;
-			display: inline-block;
-			margin-bottom: 0.5rem;
-		}
-		&.checkbox {
-			display: flex;
-			align-items: center;
-			gap: 0.5rem;
-			cursor: pointer;
-			input,
-			label {
-				margin: 0;
-			}
-		}
+	// .form__row
+	&__row {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.25rem;
+	}
+	// .form__control
+	&__control {
+	}
+	// .form__btn
+	&__btn {
+	}
+	// .form__privacy
+	&__privacy {
 	}
 	// .form__control
 	&__control {
 		text-overflow: ellipsis;
 		transition: border-color 0.3s ease 0s, color 0.3s ease 0s;
 		width: 100%;
+		color: $text;
+		text-align: center;
 		font-size: 1rem;
-		line-height: math.div(21, 16);
+
+		font-weight: 450;
+		line-height: 137.5%;
 		border-radius: rem(6);
 		padding: em(15);
 		border: rem(1) solid rgba(27, 43, 69, 0.31);
 		&::placeholder {
-			opacity: 0.4;
-			color: currentColor;
+			opacity: 1;
+			color: #575757;
 		}
 		&:hover,
 		&:focus {
 			border-color: $accent;
+		}
+		&:focus {
+			&::placeholder {
+				opacity: 0;
+			}
 		}
 		&:disabled {
 			background: #ddd;
@@ -175,32 +181,48 @@
 	text-align: center;
 	user-select: none;
 	transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-
+	font-family: $fontfamily;
 	border-radius: 0.625rem;
-	font-size: 1.125rem;
-	font-weight: 600;
-	padding: 0.875rem 2.5rem;
-
+	font-size: 1rem;
+	font-weight: 450;
+	line-height: 137.5%;
+	padding: 1.19rem 2.44rem;
+	gap: 0.5rem;
+	min-height: rem(60);
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		pointer-events: none;
+		border-radius: 0.625rem;
+		transition: opacity 0.3s ease;
+	}
 	&:focus-visible {
 		box-shadow: 0 0 rem(1) rem(1) $text;
 	}
 	&.btn-primary {
-		background: $accent;
-		border-color: $accent;
+		background: linear-gradient(90deg, #f97c4e 0%, #fb7544 100%);
 		color: $white;
-		&:hover {
-			background: darken($color: $accent, $amount: 10);
-			border-color: darken($color: $accent, $amount: 10);
+
+		&::after {
+			background: linear-gradient(90deg, #4d8a4a 0%, #406f3d 100%);
 		}
+
+		&:hover,
 		&:active {
-			background: darken($color: $accent, $amount: 20);
-			border-color: darken($color: $accent, $amount: 20);
+			&::after {
+				opacity: 0;
+			}
 		}
 	}
 	&.btn-primary-outline {
 		background: transparent;
-		border: rem(1) solid $accent;
-		color: $accent;
+		border: rem(2) solid #4d8a4a;
+		color: #2d2d2d;
 		&:hover {
 			background: $accent;
 			border-color: $accent;
@@ -211,31 +233,30 @@
 			border-color: darken($color: $accent, $amount: 10);
 		}
 	}
+
 	&.btn-secondary {
-		background: $green;
-		border-color: $green;
+		background: linear-gradient(90deg, #4d8a4a 0%, #406f3d 100%);
 		color: $white;
-		&:hover {
-			background: darken($color: $green, $amount: 10);
-			border-color: darken($color: $green, $amount: 10);
+
+		&::after {
+			background: linear-gradient(90deg, #f97c4e 0%, #fb7544 100%);
 		}
+
+		&:hover,
 		&:active {
-			background: darken($color: $green, $amount: 20);
-			border-color: darken($color: $green, $amount: 20);
+			&::after {
+				opacity: 0;
+			}
 		}
 	}
 
-	&.btn-white {
-		background: $white;
-		color: $accent;
-	}
 	&.btn-sm {
 		padding: 0.5rem 2.75rem;
 	}
 	&.btn-lg {
 		padding-block: 1.06rem;
 		@media (min-width: $md3) {
-			font-size: 1.25rem;
+			font-size: 1.375rem;
 		}
 	}
 	&.btn-fullwidth {
