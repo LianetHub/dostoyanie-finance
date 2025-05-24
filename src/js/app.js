@@ -359,56 +359,93 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // sliders
 
-    if (document.querySelector('.doctors__slider')) {
-        new Swiper('.doctors__slider .swiper', {
+    if (document.querySelector('.cases__slider-block')) {
+        new Swiper('.cases__slider-block', {
             spaceBetween: 15,
             slidesPerView: 1,
             navigation: {
-                nextEl: ".doctors__next",
-                prevEl: ".doctors__prev"
+                nextEl: ".cases__next",
+                prevEl: ".cases__prev"
             },
-            pagination: {
-                el: '.doctors__pagination',
-                clickable: true
-            },
+            // pagination: {
+            //     el: '.doctors__pagination',
+            //     clickable: true
+            // },
             breakpoints: {
                 575.98: {
                     slidesPerView: 2,
-                    spaceBetween: 22,
+                    spaceBetween: 18,
                 },
-                991.98: {
-                    slidesPerView: 3,
-                    spaceBetween: 22,
-                }
             }
         })
     }
 
-    if (document.querySelector('.reviews__slider')) {
-        new Swiper('.reviews__slider .swiper', {
-            slidesPerView: 1,
-            spaceBetween: 15,
-            navigation: {
-                nextEl: ".reviews__next",
-                prevEl: ".reviews__prev"
-            },
-            pagination: {
-                el: '.reviews__pagination',
-                clickable: true
-            },
-            breakpoints: {
-                575.98: {
-                    slidesPerView: 1,
-                    spaceBetween: 20,
-                },
-                991.98: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
-                }
-            }
 
-        })
+    // range input
+    document.querySelectorAll('.range__input')?.forEach(sliderInput => {
+
+        const minValue = +sliderInput.min || 0;
+        const maxValue = +sliderInput.max || 100;
+
+        const updateSlider = () => {
+            const percent = Math.round(100 * (+sliderInput.value - minValue) / (maxValue - minValue));
+            sliderInput.style.setProperty('--precent', `${percent}%`);
+        }
+
+        sliderInput.addEventListener('input', () => {
+            updateSlider();
+        });
+
+        updateSlider();
+    });
+
+
+    // calc
+    const calcForm = document.querySelector('.calc__form');
+    if (calcForm) {
+
+        const sumInput = calcForm.querySelector('input[name="sum"]');
+        const termInput = calcForm.querySelector('input[name="term"]');
+
+        const sumValue = calcForm.querySelector('.sum-value');
+        const termValue = calcForm.querySelector('.term-value');
+        const totalValue = calcForm.querySelector('.calc__form-total-value');
+
+        const annualPercentText = calcForm.querySelector('.annual-value');
+        const annualPercent = parseFloat(annualPercentText.textContent) || 25;
+
+        function formatNumber(num) {
+            if (num >= 10_000_000) {
+                const rounded = (num / 1_000_000).toFixed(0);
+                return rounded + ' млн ₽';
+            }
+            return num.toLocaleString('ru-RU').replace(/\s/g, '\u202F') + ' ₽';
+        }
+        function getYearText(n) {
+            if (n % 10 === 1 && n % 100 !== 11) return 'год';
+            if ([2, 3, 4].includes(n % 10) && ![12, 13, 14].includes(n % 100)) return 'года';
+            return 'лет';
+        }
+
+        function updateCalculation() {
+            const sum = parseInt(sumInput.value, 10);
+            const term = parseInt(termInput.value, 10);
+            const rate = annualPercent / 100;
+
+            const income = Math.round(sum * Math.pow(1 + rate, term)) - sum;
+
+            sumValue.textContent = formatNumber(sum);
+            termValue.textContent = `${term} ${getYearText(term)}`;
+            totalValue.textContent = formatNumber(income);
+        }
+
+        sumInput.addEventListener('input', updateCalculation);
+        termInput.addEventListener('input', updateCalculation);
+
+        updateCalculation();
     }
+
+
 
 
 

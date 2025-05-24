@@ -5,7 +5,7 @@ body {
 	min-height: 100%;
 	line-height: normal;
 	color: $text;
-	background-color: #f8f9fc;
+	background-color: #fff;
 	margin-right: 0 !important;
 	&:has(.header.open-menu) {
 		@media (max-width: $md3) {
