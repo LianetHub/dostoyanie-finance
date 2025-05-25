@@ -298,6 +298,16 @@ document.addEventListener("DOMContentLoaded", () => {
             target.classList.toggle('active');
 
         }
+
+        if (target.matches('.article__full')) {
+            target.classList.toggle('active');
+            target.parentNode.classList.toggle('active');
+            if (target.classList.contains('active')) {
+                target.textContent = 'Скрыть';
+            } else {
+                target.textContent = 'Развернуть';
+            }
+        }
     });
 
 
@@ -363,6 +373,8 @@ document.addEventListener("DOMContentLoaded", () => {
         new Swiper('.cases__slider-block', {
             spaceBetween: 15,
             slidesPerView: 1,
+
+            watchSlidesProgress: true,
             navigation: {
                 nextEl: ".cases__next",
                 prevEl: ".cases__prev"

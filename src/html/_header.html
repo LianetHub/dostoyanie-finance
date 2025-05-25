@@ -3,38 +3,16 @@
         <div class="header__top">
             <a href="/" class="header__logo">
                 <img src="@img/logo.svg" alt="Логотип">
-                <span>Клиника ментального здоровья</span>
             </a>
-            <div class="header__contacts icon-phone">
-                <a href="tel:+78126067796" class="header__contacts-phone"><span>+7 (812) 606-77-96</span></a>
-                <p class="header__contacts-worktime">Ежедневно: 09-00 — 21:00</p>
+            <div class="header__location">
+                <div class="header__location-caption">Ваш регион:</div>
+                <a href="" class="header__location-btn icon-location"><span>Нижний Новгород</span></a>
             </div>
-            <div class="header__address">
-                <address>СПб, ул. Большая Пушкарская, д. 6</address>
-                <div class="header__address-footer">
-                    <div class="header__address-station icon-metro">
-                        Петроградская
-                    </div>
-                    <a href="" class="header__address-link">Как доехать?</a>
-                </div>
+            <div class="header__contacts">
+                <a href="tel:+78126067796" class="header__contacts-phone icon-phone"><span><span class="color-accent">8 (800)</span> 555-35-35</span></a>
+                <p class="header__contacts-hint">Бесплатная консультация</p>
             </div>
-            <div class="header__socials">
-                <div class="header__socials-text">Написать нам:</div>
-                <div class="header__socials-links">
-                    <a href="" class="header__socials-link icon-whatsapp"></a>
-                    <a href="" class="header__socials-link icon-telegram"></a>
-                </div>
-            </div>
-            <div class="header__actions">
-                <div class="header__search search">
-                    <button type="button" aria-label="Открыть форму поиска" class="search__btn icon-search"></button>
-                    <form action="#" class="search__form">
-                        <input type="text" autocomplete="off" name="search" class="search__form-input form__input" placeholder="Введите запрос...">
-                        <button type="submit" class="search__submit btn btn-primary ">Искать</button>
-                    </form>
-                </div>
-                <button type="button" aria-label="Режим для слабовидящих" class="header__eye icon-eye"></button>
-            </div>
+            <a href="#callback" data-fancybox class="header__callback btn btn-secondary">Заказать звонок</a>
             <button type="button" class="header__menu-btn icon-menu">
                 <span></span>
                 <span></span>
@@ -45,66 +23,60 @@
             <nav aria-label="Меню в шапке" class="menu__body">
                 <ul class="menu__list">
                     <li class="menu__item menu-parent">
-                        <a href="" class="menu__link@@if(typeof active !== 'undefined' && active===1){ active}">Услуги</a>
+                        <a href="" class="menu__link@@if(typeof active !== 'undefined' && active===1){ active}">Деньги под залог недвижимости</a>
                         <button type="button" class="menu__arrow icon-chevron"></button>
                         <div class="submenu">
                             <div class="submenu__container">
                                 <ul class="submenu__list">
                                     <li class="submenu__category">
-                                        <a href="" class="submenu__category-caption">Психиатрия</a>
+                                        <a href="" class="submenu__category-caption">Займы под залог</a>
                                         <ul class="submenu__category-list">
-                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Консультация психиатра</a></li>
-                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Лечение депрессии</a></li>
-                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Лечение тревожных расстройств</a></li>
-                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Помощь при панических атаках</a></li>
-                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Лечение шизофрении</a></li>
-                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Лечение биполярного расстройства</a></li>
-                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Лечение обсессивно-компульсивного расстройства (ОКР)</a></li>
-                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Терапия при посттравматическом стрессовом расстройстве (ПТСР)</a></li>
-                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Лечение зависимостей (алкогольная, наркотическая, игровая)</a></li>
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Займ под залог квартиры</a></li>
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Займ под залог дома</a></li>
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Займ под залог земельного участка</a></li>
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Займ под залог коммерческой недвижимости</a></li>
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Займ под залог строящегося жилья</a></li>
                                         </ul>
                                     </li>
                                     <li class="submenu__category">
-                                        <a href="" class="submenu__category-caption">Неврология</a>
+                                        <a href="" class="submenu__category-caption">Услуги</a>
                                         <ul class="submenu__category-list">
-                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Консультация невролога</a></li>
-                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Лечение мигрени и головных болей</a></li>
-                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Лечение нарушений сна (бессонница, апноэ)</a></li>
-                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Помощь при хронической усталости</a></li>
-                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Лечение нейропатий (например, полинейропатия)</a></li>
-                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Диагностика и лечение эпилепсии</a></li>
-                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Лечение последствий черепно-мозговых травм</a></li>
-                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Реабилитация после инсультов</a></li>
-                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Диагностика заболеваний центральной и периферической нервной системы</a></li>
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Рефинансирование займов</a></li>
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Ипотечное кредитование</a></li>
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Юридическое сопровождение сделок</a></li>
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Оценка недвижимости</a></li>
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Проверка прав собственности</a></li>
                                         </ul>
                                     </li>
                                     <li class="submenu__category">
-                                        <a href="" class="submenu__category-caption">Психология</a>
+                                        <a href="" class="submenu__category-caption">Информация</a>
                                         <ul class="submenu__category-list">
-                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Индивидуальная психологическая консультация</a></li>
-                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Семейная и парная терапия</a></li>
-                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Детская и подростковая психология</a></li>
-                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Помощь при низкой самооценке и проблемах с уверенностью</a></li>
-                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Коррекция эмоционального состояния (стресс, раздражительность, апатия)</a></li>
-                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Психологическая помощь при кризисах и утрате</a></li>
-                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Помощь в адаптации после стрессовых ситуаций</a></li>
-                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Работа с фобиями и страхами</a></li>
-                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Лечение вегетососудистой дистонии (ВСД)</a></li>
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Условия получения займа</a></li>
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Необходимые документы</a></li>
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Ответы на частые вопросы</a></li>
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Калькулятор займа</a></li>
+                                            <li class="submenu__category-item"><a href="" class="submenu__category-link">Блог о финансах и недвижимости</a></li>
                                         </ul>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </li>
-                    <li class="menu__item"><a href="/about.html" class="menu__link@@if(typeof active !== 'undefined' && active===2){ active}">О клинике</a></li>
-                    <li class="menu__item"><a href="" class="menu__link">Специалисты</a></li>
-                    <li class="menu__item"><a href="/price.html" class="menu__link@@if(typeof active !== 'undefined' && active===4){ active}">Стоимость</a></li>
-                    <li class="menu__item"><a href="/blog.html" class="menu__link@@if(typeof active !== 'undefined' && active===5){ active}">Статьи</a></li>
-                    <li class="menu__item"><a href="" class="menu__link">Отзывы</a></li>
-                    <li class="menu__item"><a href="/contacts.html" class="menu__link@@if(typeof active !== 'undefined' && active===7){ active}">Контакты</a></li>
+                    <li class="menu__item"><a href="" class="menu__link@@if(typeof active !== 'undefined' && active===2){ active}">Деньги под залог АВТО</a></li>
+                    <li class="menu__item"><a href="" class="menu__link@@if(typeof active !== 'undefined' && active===4){ active}">Срочный выкуп недвижимости</a></li>
+                    <li class="menu__item"><a href="" class="menu__link@@if(typeof active !== 'undefined' && active===5){ active}">Рефинансирование</a></li>
+                    <li class="menu__item"><a href="" class="menu__link">Вопрос-ответ</a></li>
+                    <li class="menu__item"><a href="" class="menu__link@@if(typeof active !== 'undefined' && active===7){ active}">О нас</a></li>
+                    <li class="menu__item"><a href="" class="menu__link@@if(typeof active !== 'undefined' && active===8){ active}">Контакты</a></li>
                 </ul>
             </nav>
-            <a href="#callback" data-fancybox class="menu__callback btn btn-primary btn-lg">Запись на прием</a>
+            <div class="header__search search">
+                <button type="button" aria-label="Открыть форму поиска" class="search__btn icon-search"></button>
+                <form action="#" class="search__form">
+                    <input type="text" autocomplete="off" name="search" class="search__form-input form__input" placeholder="Введите запрос...">
+                    <button type="submit" class="search__submit btn btn-primary ">Искать</button>
+                </form>
+            </div>
         </div>
     </div>
 </header>

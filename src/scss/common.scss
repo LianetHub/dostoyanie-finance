@@ -72,10 +72,10 @@ body {
 	&__body {
 		display: flex;
 		margin: 0 rem(-10);
-		flex: 0 0 66.66666%;
 	}
 	// .feedback__main
 	&__main {
+		flex: 0 0 66.66666%;
 		padding: 2.75rem rem(10);
 	}
 	// .feedback__title
@@ -86,6 +86,7 @@ body {
 		margin-top: 0.75rem;
 		font-size: 1rem;
 		line-height: 140%;
+		max-width: 24rem;
 	}
 	// .feedback__form
 	&__form {
@@ -94,8 +95,11 @@ body {
 	// .feedback__image
 	&__image {
 		margin-top: -7.81rem;
+		margin-bottom: 0;
 		flex: 0 0 33.3333%;
 		padding: 0 rem(10);
+		display: flex;
+		align-items: flex-end;
 	}
 }
 
@@ -324,16 +328,14 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: $accent;
+	background: #406f3d;
 	color: $white;
 	box-shadow: 0 0 rem(9) rgba(0, 0, 0, 0.06);
 	&:disabled,
 	&.swiper-button-disabled,
 	&[aria-disabled="true"] {
-		background: #d7e4ff;
-		color: #fff;
 		pointer-events: none;
-		opacity: 1;
+		opacity: 0.4;
 	}
 	&.swiper-button-lock {
 		display: none;
@@ -342,7 +344,7 @@ body {
 	@media (any-hover: hover) {
 		&:hover {
 			background: $white;
-			color: $text;
+			color: $accent;
 		}
 	}
 }
