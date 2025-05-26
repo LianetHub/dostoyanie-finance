@@ -7,12 +7,21 @@
 	// .footer__body
 	&__body {
 		display: flex;
+		flex-wrap: wrap;
+		row-gap: rem(24);
 		margin: 0 rem(-10);
 	}
 	// .footer__main
 	&__main {
-		flex: 0 0 25%;
 		padding: rem(0) rem(10);
+		order: -1;
+		flex: 0 0 100%;
+		@media (min-width: $md5) {
+			flex: 0 0 50%;
+		}
+		@media (min-width: $md3) {
+			flex: 0 0 25%;
+		}
 	}
 	// .footer__logo
 	&__logo {
@@ -26,8 +35,11 @@
 	}
 	// .footer__menu
 	&__menu {
-		flex: 0 0 50%;
 		display: flex;
+		flex: 0 0 100%;
+		@media (min-width: $md3) {
+			flex: 0 0 50%;
+		}
 	}
 	// .footer__menu-column
 	&__menu-column {
@@ -60,11 +72,19 @@
 	}
 	// .footer__contacts
 	&__contacts {
-		flex: 0 0 25%;
 		padding: rem(0) rem(10);
 		display: flex;
 		flex-direction: column;
 		gap: 1.19rem;
+		order: -1;
+		flex: 0 0 100%;
+		@media (min-width: $md5) {
+			flex: 0 0 50%;
+		}
+		@media (min-width: $md3) {
+			flex: 0 0 25%;
+			order: 0;
+		}
 	}
 	// .footer__phone
 	&__phone {
@@ -150,11 +170,13 @@
 	// .footer__bottom-text
 	&__bottom-text {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
 		gap: rem(20);
 		color: #787878;
 		font-size: 0.875rem;
 		font-weight: 300;
+		@media (min-width: $md4) {
+			grid-template-columns: repeat(2, 1fr);
+		}
 	}
 	// .footer__bottom-copy
 	&__bottom-copy {
