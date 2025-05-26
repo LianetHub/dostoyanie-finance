@@ -3062,3 +3062,110 @@ body {
 .about__article-text ul li:not(:last-child) {
   margin-bottom: 1.12rem;
 }
+
+.reviews {
+  padding: 1.5rem 0;
+}
+.reviews__list {
+  margin-top: 3.5rem;
+  display: grid;
+  gap: 1.25rem;
+}
+@media (min-width: 991.98px) {
+  .reviews__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.reviews__loadmore {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  color: #000;
+  font-size: 1rem;
+  line-height: 140%;
+  gap: 0.75rem;
+  transition: color 0.3s ease;
+}
+.reviews__loadmore::before {
+  font-size: 0.5rem;
+  order: 1;
+}
+@media (any-hover: hover) {
+  .reviews__loadmore:hover {
+    color: #4d8a4a;
+  }
+}
+
+.review {
+  border-radius: 0.9375rem;
+  box-shadow: -0.0625rem 0.25rem 1.25rem 0 rgba(0, 0, 0, 0.08);
+  background: url("../img/quotes.svg") calc(100% - 1.75rem) 1.5rem/8rem auto no-repeat, #fff;
+  padding: 1.5rem 2rem;
+}
+@media (min-width: 575.98px) {
+  .review {
+    padding: 2.75rem 2.94rem;
+  }
+}
+.review__header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+@media (min-width: 575.98px) {
+  .review__header {
+    align-items: center;
+    flex-direction: row;
+  }
+}
+.review__name {
+  color: #000;
+  font-size: 1.625rem;
+  font-weight: 500;
+}
+.review__time {
+  display: flex;
+  align-items: center;
+  color: #4b4b4b;
+  gap: 0.25rem;
+}
+@media (min-width: 575.98px) {
+  .review__time {
+    font-size: 1.125rem;
+  }
+}
+.review__time::before {
+  font-size: 1.5rem;
+}
+.review__rate {
+  margin-top: 2rem;
+  color: #ffca10;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.review__quote {
+  margin-top: 1.96rem;
+  color: #4b4b4b;
+}
+@media (min-width: 575.98px) {
+  .review__quote {
+    font-size: 1.125rem;
+  }
+}
+.review__more {
+  margin-top: 1.5rem;
+  color: #406f3d;
+  display: inline-block;
+  font-size: 1.125rem;
+}
+@media (any-hover: hover) {
+  .review__more:hover {
+    text-decoration: underline;
+  }
+}
