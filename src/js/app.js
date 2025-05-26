@@ -420,26 +420,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // calc
-    const calcForm = document.querySelector('.calc__form');
-    if (calcForm) {
+    document.querySelectorAll('.calc__form')?.forEach(calcForm => {
+        const calcType = calcForm.dataset.calc || 'invest';
 
         const sumInput = calcForm.querySelector('input[name="sum"]');
         const termInput = calcForm.querySelector('input[name="term"]');
 
         const sumValue = calcForm.querySelector('.sum-value');
         const termValue = calcForm.querySelector('.term-value');
-        const totalValue = calcForm.querySelector('.calc__form-total-value');
 
         const annualPercentText = calcForm.querySelector('.annual-value');
         const annualPercent = parseFloat(annualPercentText.textContent) || 25;
 
+        const valueCurrent = calcForm.querySelector('.calc__form-total-value-current');
+        const valueOld = calcForm.querySelector('.calc__form-total-value-old');
+
+
         function formatNumber(num) {
             if (num >= 10_000_000) {
                 const rounded = (num / 1_000_000).toFixed(0);
-                return rounded + ' млн ₽';
+                return `${rounded} млн ₽`;
             }
             return num.toLocaleString('ru-RU').replace(/\s/g, '\u202F') + ' ₽';
         }
+
         function getYearText(n) {
             if (n % 10 === 1 && n % 100 !== 11) return 'год';
             if ([2, 3, 4].includes(n % 10) && ![12, 13, 14].includes(n % 100)) return 'года';
@@ -451,18 +455,34 @@ document.addEventListener("DOMContentLoaded", () => {
             const term = parseInt(termInput.value, 10);
             const rate = annualPercent / 100;
 
-            const income = Math.round(sum * Math.pow(1 + rate, term)) - sum;
-
             sumValue.textContent = formatNumber(sum);
             termValue.textContent = `${term} ${getYearText(term)}`;
-            totalValue.textContent = formatNumber(income);
+
+            if (calcType === 'loan') {
+                // === Расчёт для займа ===
+                const income = Math.round(sum * rate * term); // Проценты без капитализации
+                const oldIncome = Math.round(income * 2);     // Старая доходность, например в 2 раза больше
+
+                if (valueCurrent && valueOld) {
+                    valueCurrent.textContent = formatNumber(income);
+                    valueOld.textContent = formatNumber(oldIncome);
+                }
+            } else {
+                // === Расчёт для инвестиций ===
+                const income = Math.round(sum * Math.pow(1 + rate, term)) - sum;
+                const totalValue = calcForm.querySelector('.calc__form-total-value');
+                if (totalValue) {
+                    totalValue.textContent = formatNumber(income);
+                }
+            }
         }
 
         sumInput.addEventListener('input', updateCalculation);
         termInput.addEventListener('input', updateCalculation);
 
         updateCalculation();
-    }
+    });
+
 
 
 

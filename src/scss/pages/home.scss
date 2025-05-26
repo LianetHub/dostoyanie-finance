@@ -1,7 +1,7 @@
 .promo {
 	padding: 2.5rem 0 3rem 0;
 	@media (min-width: $md5) {
-		padding: 1.25rem 0 3rem 0;
+		padding: 2.5rem 0 3rem 0;
 	}
 	// .promo__container
 	&__container {
@@ -25,7 +25,7 @@
 	&__offer {
 		display: contents;
 		@media (min-width: $md3) {
-			padding: 0 rem(10);
+			padding: rem(50) rem(10) 0;
 			display: block;
 			flex: 0 0 58.33333%;
 		}
@@ -260,16 +260,56 @@
 					}
 				}
 			}
+			.benefits__item-picture {
+				height: auto;
+				@media (min-width: $md3) {
+					width: 27.551rem;
+					height: 25.3125rem;
+					flex-shrink: 0;
+				}
+			}
+		}
+		&:has(.benefits__item-picture) {
+			.benefits__item-list {
+				li {
+					display: flex;
+					align-items: center;
+					gap: 1.12rem;
+					padding: 0;
+					color: #303030;
+					font-size: 1.25rem;
+					font-weight: 500;
+					line-height: 140%;
+					&::before {
+						@extend %ic, .icon-check;
+						width: 2.625rem;
+						flex-shrink: 0;
+						height: 2.625rem;
+						border-radius: 50%;
+						background: #f9fae9;
+						color: #4d8a4a;
+						position: static;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+					}
+				}
+			}
 		}
 	}
 	&__item-picture {
-		margin: 0rem -2rem -2.5rem -2rem;
+		margin: auto -2rem -2.5rem -2rem;
 		display: flex;
 		align-items: center;
 		overflow: hidden;
 		height: rem(265);
+		&.sm-picture {
+			max-width: 16.69513rem;
+			margin-left: auto;
+			align-items: flex-end;
+		}
 		@media (min-width: $md5) {
-			margin: 0rem -2.75rem -3.56rem -2.15rem;
+			margin: auto -2.75rem -3.56rem -2.15rem;
 		}
 	}
 	// .benefits__item-image
@@ -477,8 +517,6 @@
 	}
 	// .calc__image
 	&__image {
-		width: 22.6875rem;
-		height: 22.6875rem;
 		margin-top: -3.5rem;
 		margin-left: -2rem;
 	}
@@ -486,6 +524,7 @@
 	&__title {
 		@media (min-width: $md4) {
 			font-size: 1.875rem;
+			max-width: rem(457);
 		}
 	}
 	// .calc__desc
@@ -631,9 +670,31 @@
 		font-size: 2.75rem;
 		font-weight: 600;
 		white-space: nowrap;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
 	}
 	// .calc__form-btn
 	&__form-btn {
+	}
+	// .calc__form-total-value-current
+	&__form-total-value-current {
+		color: $accent;
+	}
+	// .calc__form-total-value-old
+	&__form-total-value-old {
+		font-size: em(24, 44);
+		text-decoration: line-through;
+	}
+	&__consult {
+		margin-top: rem(52);
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.5rem;
+		max-width: rem(570);
+		.form__privacy {
+			grid-column: span 2;
+		}
 	}
 }
 
@@ -783,6 +844,10 @@
 		background: #fff;
 		box-shadow: $shadow;
 		padding: 2.88rem 2.75rem;
+		min-height: rem(510);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
 	// .guarantees__item
 	&__item {
