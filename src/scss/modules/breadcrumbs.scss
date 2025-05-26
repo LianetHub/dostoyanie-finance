@@ -1,27 +1,18 @@
 .breadcrumbs {
-	padding: 1.5rem 0;
-	@media (min-width: $md3) {
-		padding: 2.5rem 0;
-	}
-	& + .price {
-		padding-top: 0;
-	}
-	&__items {
-		display: flex;
-		flex-wrap: wrap;
-	}
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 2.12rem;
 	// .breadcrumbs__item
 	&__item {
 		display: flex;
 		align-items: center;
-		color: #0739a6;
-		font-size: 1rem;
-		font-weight: 500;
-		line-height: 150%;
+		color: #4b4b4b;
+		font-size: 1.125rem;
+		line-height: 140%;
 		&:not(:last-child) {
 			&::before {
-				margin: 0 0.75rem;
-				font-size: rem(10);
+				margin: 0 0.5rem;
+				font-size: rem(4);
 				color: currentColor;
 				order: 1;
 				transform: rotate(-90deg);
@@ -34,11 +25,10 @@
 		transition: color 0.3s ease 0s;
 		@media (any-hover: hover) {
 			&:hover {
-				color: #2b2b2b;
+				color: $accent;
 			}
 		}
 		&.active {
-			color: #2b2b2b;
 			pointer-events: none;
 		}
 	}

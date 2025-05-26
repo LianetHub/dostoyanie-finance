@@ -227,6 +227,9 @@ body {
 
 .contacts {
 	padding: 4.75rem 0;
+	&:first-child {
+		padding-top: 1.5rem;
+	}
 	// .contacts__container
 	&__container {
 	}
@@ -235,9 +238,73 @@ body {
 		display: grid;
 		align-items: center;
 		gap: rem(20);
+		.contacts__map {
+			margin-top: 0;
+		}
+		&:not(:first-child) {
+			margin-top: 2.56rem;
+		}
+		&:has(.contacts__form) {
+			align-items: stretch;
+		}
 		@media (min-width: $md4) {
 			grid-template-columns: repeat(2, 1fr);
 		}
+	}
+	// .contacts__form
+	&__form {
+		border-radius: 1.25rem;
+		background: #f9fae9;
+		align-self: stretch;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		.form__privacy {
+			max-width: rem(400);
+		}
+		padding: 2rem 1.5rem;
+		@media (min-width: $md4) {
+			padding: 3.25rem 2.56rem;
+		}
+	}
+	// .contacts__form-title
+	&__form-title {
+	}
+	// .contacts__form-row
+	&__form-row {
+		margin-top: 2.25rem;
+		display: grid;
+		gap: 1.44rem;
+		@media (min-width: $md3) {
+			grid-template-columns: repeat(2, 1fr);
+			& .form__control:last-child {
+				grid-column: span 2;
+			}
+		}
+	}
+	&__form-btn {
+		margin-top: rem(28);
+		min-height: rem(44);
+		@media (max-width: $md4) {
+			width: 100%;
+		}
+		@media (min-width: $md5) {
+			min-width: rem(284);
+		}
+	}
+	// .contacts__column
+	&__column {
+		box-shadow: $shadow;
+		border-radius: 1.25rem;
+		padding: 2.25rem 2.63rem;
+	}
+	// .contacts__image
+	&__image {
+		max-width: 18.625rem;
+		max-height: rem(161);
+		display: block;
+		border-radius: 0.625rem;
+		overflow: hidden;
 	}
 	// .contacts__map
 	&__map {
@@ -246,6 +313,7 @@ body {
 		position: relative;
 		z-index: 1;
 		height: 29.125rem;
+		margin-top: 3.87rem;
 		& iframe {
 			position: absolute;
 			top: 0;
@@ -298,10 +366,21 @@ body {
 	&__phone {
 		font-size: 1.375rem;
 		font-weight: 600;
+		transition: color 0.3s ease;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $accent;
+			}
+		}
 	}
 	// .contacts__email
 	&__email {
 		text-decoration-line: underline;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: none;
+			}
+		}
 	}
 	// .contacts__socials
 	&__socials {

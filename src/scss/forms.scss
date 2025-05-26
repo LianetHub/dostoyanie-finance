@@ -39,6 +39,7 @@
 		line-height: 137.5%;
 		border-radius: rem(6);
 		padding: em(15);
+		min-height: rem(58);
 		border: rem(1) solid rgba(27, 43, 69, 0.31);
 		&::placeholder {
 			opacity: 1;
@@ -62,8 +63,11 @@
 			background: #fff1ed;
 		}
 		&:is(textarea) {
-			height: rem(137);
+			height: rem(119);
 			resize: none;
+			@media (min-width: $md3) {
+				text-align: left;
+			}
 		}
 	}
 
