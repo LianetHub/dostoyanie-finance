@@ -170,7 +170,7 @@
 
 .benefits {
 	background: #feffeb;
-	padding: rem(44) 0 rem(84);
+	padding: rem(44) 0 rem(124);
 	position: relative;
 	&::before {
 		content: "";
@@ -260,6 +260,16 @@
 					}
 				}
 			}
+		}
+	}
+	&__item-picture {
+		margin: 0rem -2rem -2.5rem -2rem;
+		display: flex;
+		align-items: center;
+		overflow: hidden;
+		height: rem(265);
+		@media (min-width: $md5) {
+			margin: 0rem -2.75rem -3.56rem -2.15rem;
 		}
 	}
 	// .benefits__item-image
