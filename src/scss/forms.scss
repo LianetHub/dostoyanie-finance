@@ -7,6 +7,35 @@
 			grid-template-columns: repeat(3, 1fr);
 		}
 	}
+	&__bottom {
+		margin-top: 1.31rem;
+		display: flex;
+		gap: 1.81rem;
+		flex-direction: column;
+		@media (min-width: $md3) {
+			align-items: flex-end;
+			flex-wrap: wrap;
+			flex-direction: row;
+		}
+		.form__btn {
+			min-height: rem(58);
+			min-width: rem(248);
+		}
+	}
+	&__field {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 0.75rem;
+	}
+	// .form__label
+	&__label {
+		line-height: 140%;
+		font-size: 0.75rem;
+		@media (min-width: $md1) {
+			font-size: 0.875rem;
+		}
+	}
 
 	// .form__btn
 	&__btn {
@@ -180,6 +209,41 @@
 		white-space: nowrap;
 		&.btn {
 			padding-inline: 1rem;
+		}
+	}
+	// .form__file
+	&__file {
+	}
+	// .form__file-btn
+	&__file-btn {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		user-select: none;
+		transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+		font-family: $fontfamily;
+		font-weight: 450;
+		line-height: 137.5%;
+		gap: 0.5rem;
+		border-radius: 0.625rem;
+		padding: 0.7rem 2.44rem;
+		min-height: rem(58);
+		font-size: 1rem;
+		border: rem(1) solid #fff;
+		color: #fff;
+		cursor: pointer;
+		&::before {
+			font-size: 2rem;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background: #fff;
+				color: #000;
+			}
 		}
 	}
 }

@@ -37,12 +37,12 @@
 	<meta property="twitter:image:src" content="/OG.jpg">
 	<!-- Twitter -->
 	<!-- plugins -->
-	<link rel="stylesheet" href="css/libs/input-tel.css?_v=20250526150808">
-	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20250526150808">
-	<link rel="stylesheet" href="css/libs/fancybox.min.css?_v=20250526150808">
+	<link rel="stylesheet" href="css/libs/input-tel.css?_v=20250527094107">
+	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20250527094107">
+	<link rel="stylesheet" href="css/libs/fancybox.min.css?_v=20250527094107">
 	<!-- plugins -->
-	<link rel="stylesheet" href="css/reset.min.css?_v=20250526150808">
-	<link rel="stylesheet" href="css/style.min.css?_v=20250526150808">
+	<link rel="stylesheet" href="css/reset.min.css?_v=20250527094107">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250527094107">
 </head>
 
 <body>
@@ -180,19 +180,38 @@
 				<div class="feedback__container">
 					<div class="feedback__body">
 						<div class="feedback__main">
-							<h2 class="feedback__title title">Узнать о инвестировании</h2>
-							<p class="feedback__subtitle">Узнайте, сколько может приносить ваш капитал, даже если он просто "лежит" на счёте.</p>
+							<h2 class="feedback__title title">Оставить заявку на займ</h2>
+							<p class="feedback__subtitle">Оформление срочного кредита под недвижимость станет намного проще и быстрее с нашей бесценной поддержкой.</p>
 							<form action="#" class="feedback__form form">
 								<div class="form__row">
-									<input type="text" name="name" class="form__control" placeholder="Ваше имя">
-									<input type="tel" name="phone" class="form__control" placeholder="Номер телефона">
+									<div class="form__field">
+										<label for="feedback-name" class="form__label">Как к вам обращаться:</label>
+										<input type="text" name="name" id="feedback-name" class="form__control" placeholder="Ваше имя">
+									</div>
+									<div class="form__field">
+										<label for="feedback-phone" class="form__label">Ваш номер:</label>
+										<input type="tel" name="phone" id="feedback-phone" class="form__control" placeholder="Номер телефона">
+									</div>
+									<div class="form__field">
+										<label for="feedback-sum" class="form__label">Желаемая сумма займа (до 5 млн.):</label>
+										<input type="number" name="sum" class="form__control" placeholder="Введите сумму">
+									</div>
+								</div>
+								<div class="form__bottom">
+									<div class="form__field">
+										<label for="feedback-document" class="form__label">Повысьте шанс на одобрение, загрузив докменты:</label>
+										<label class="form__file">
+											<input type="file" name="file" id="feedback-document" class="form__file hidden" hidden>
+											<span class="form__file-btn icon-pdf">Документы на недвижимость</span>
+										</label>
+									</div>
 									<button type="submit" class="form__btn btn btn-secondary">Получить консультацию</button>
 								</div>
 								<div class="form__privacy"> Нажимая на кнопку, вы даете согласие на обработку <a href="">персональных данных</a>
 								</div>
 							</form>
 						</div>
-						<div class="feedback__image">
+						<div class="feedback__image feedback__image--large">
 							<img src="img/woman-form.png" alt="Фото женщины">
 						</div>
 					</div>
@@ -457,10 +476,10 @@
 				</div>
 			</form>
 		</div> <!-- plugins -->
-		<script src="js/libs/fancybox.umd.js?_v=20250526150808"></script>
-		<script src="js/libs/swiper-bundle.min.js?_v=20250526150808"></script>
+		<script src="js/libs/fancybox.umd.js?_v=20250527094107"></script>
+		<script src="js/libs/swiper-bundle.min.js?_v=20250527094107"></script>
 		<!-- plugins -->
-		<script src="js/app.min.js?_v=20250526150808"></script>
+		<script src="js/app.min.js?_v=20250527094107"></script>
 	</div>
 </body>
 

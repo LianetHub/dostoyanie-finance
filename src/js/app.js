@@ -372,7 +372,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (document.querySelector('.promo__slider')) {
         new Swiper('.promo__slider', {
             slidesPerView: "auto",
-            spaceBetween: 16
+            spaceBetween: 16,
+            breakpoints: {
+                991.98: {
+                    slidesPerView: 3
+                }
+            }
         })
     }
 
